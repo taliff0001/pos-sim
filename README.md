@@ -5,7 +5,7 @@ Generates a plausible point-of-sale export for a fictional restaurant, with a **
 - **The numbers come from code.** Every effect (weekday pattern, seasonality, rain, snow, holidays, festivals, games) is drawn from published ranges in [`restaurant-weather-demo/research/effect-sizes.md`](https://github.com/taliff0001/restaurant-weather-demo/blob/main/research/effect-sizes.md); some optional effects are switched off at random. The weather (KROA) and the event calendar are real.
 - **The restaurant's shape is hidden**: hours profile, patio or not, bar or not. The analyst works it out from the timestamps.
 - **Wildcards** come from a fixed catalog (closure, equipment failure, private party, price increase, renamed dish, brunch trial, street construction, one huge day, staff shortage); the code picks dates and magnitudes.
-- **The LLM, when on, has two jobs**: invent the restaurant (name, menu, prices inside per-category ranges, server names) and the one-line story for each wildcard, both as schema-validated JSON, cached by seed. It never touches a number.
+- **Not built yet: an optional LLM "flavor" layer.** The plan is for it to invent the restaurant (name, menu, prices inside per-category ranges, server names) and a one-line story for each wildcard, as schema-validated JSON, never touching a number. For now every run uses the built-in default restaurant, and wildcard stories come from templates. Leave the `llm` setting off; turning it on fails.
 - **Same seed and settings, same export**, every time.
 
 ```
